@@ -1,9 +1,9 @@
 ﻿using System;
 namespace SpinningDiscs
 {
-    public class DVD : StorageDisk, IDisc, IDigitalStorage
+    public class Floppy : StorageDisk, IDisc, IDigitalStorage
     {
-        public DVD(string name, string type, double diameter, int capacity) : base(name, type, diameter, capacity)
+        public Floppy(string name, string type, double diameter, int capacity) : base(name, type, diameter, capacity)
         {
         }
 
@@ -11,11 +11,11 @@ namespace SpinningDiscs
         {
             if (Contents.Count == 0)
             {
-                Console.WriteLine("DVD is empty");
+                Console.WriteLine("Floppy is empty");
                 return;
             }
 
-            Console.WriteLine("DVD contains:");
+            Console.WriteLine("Floppy record contains:");
             foreach (string el in Contents)
             {
                 Console.WriteLine(el);
@@ -24,7 +24,7 @@ namespace SpinningDiscs
 
         public void Spin()
         {
-            Console.WriteLine("A DVD spins at a rate of 570 - 1600 rpm.");
+            Console.WriteLine("A Floppy disk record spins at 300 rpm.");
         }
     }
 }
