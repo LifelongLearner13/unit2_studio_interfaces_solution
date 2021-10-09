@@ -6,9 +6,24 @@ namespace SpinningDiscs
     {
         static void Main(string[] args)
         {
-            // TODO: Declare and initialize a CD and a DVD object.
+            CD cd = new CD("CD example", "CD-R", 4.5, 5);
+            DVD dvd = new DVD("DVD example", "DVD-R", 6.6, 1450);
 
-            // TODO: Call each CD and DVD method to verify that they work as expected.
+            cd.Spin();
+            dvd.Spin();
+
+            cd.ReadData();
+            dvd.ReadData();
+
+            cd.WriteData("Sims 4.exe");
+            dvd.WriteData("Stargate");
+
+            cd.ReadData();
+            dvd.ReadData();
+
+            Console.WriteLine(cd.Info());
+            Console.WriteLine(dvd.Info());
+
         }
     }
 }
